@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            *
+            {
+            background-color: aqua;
+            color: black;
+            text-align: center;
+            }
+            </style>
+        <script>
+          function ig()
+          {
+            document.getElementById("perc").value=(document.getElementById("om").value/document.getElementById("mm").value*100);
+            var Percentage=document.getElementById("perc").value;
+            var g;
+            switch(Math.floor(Percentage/10))
+            {
+                case 9: 
+                
+                case 8: g="Oustanding";
+                break;
+
+                case 7: g="Distinction";
+                break;
+
+                case 6: g="Good";
+                break;
+
+                case 5: g="Average"; 
+                break;
+
+                case 4: g="Pass"; 
+                break;
+
+                default: g="Fail";
+                break;
+            }
+            document.getElementById("gr").value=g;
+          }
+        </script>
+        </head>
+    <body>
+       <h1>Percentage and Grade Calculator</h1>
+       <br><br><br>
+       Max Marks: <input type="text" id="mm"><br><br>
+       Obtained Marks: <input type="text" id="om"><br><br>
+       <button type="button" onclick="ig()">Submit</button><br><br>
+       Percentage: <input type="text" id="perc"><br><br>
+       Grade: <input type="text" id="gr">
+        </body>
+</html>
